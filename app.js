@@ -20,6 +20,8 @@ const { Roles } = require('./src/utils');
 const port = process.env.PORT || 3000;
 const app = express();
 
+app.use(cors())
+
 app.get('/', async (req, res) => {
   try {
     res.send('<h1>Welcome to the Libary!</h1>');
